@@ -1,0 +1,88 @@
+
+body
+ {
+    background: #000;
+    color: #45f3ff;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    padding-top: 100px;
+    background:url("https://c4.wallpaperflare.com/wallpaper/861/409/209/time-background-watch-wallpaper-preview.jpg");
+    background-size:cover;
+    background-repeat:repeat;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .input-container {
+    margin-bottom: 20px;
+    margin: 100px;
+  }
+  
+  #greeting {
+    font-size: 24px;
+    margin: 80px ;
+    color: #45f3ff;
+    white-space: normal
+    ;
+  }
+  
+  .clock-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  
+  .digit {
+    width: 40px;
+    height: 80px;
+    position: relative;
+  }
+  
+  .segment {
+    position: absolute;
+    background: #222;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  .segment.on {
+    background: #45f3ff;
+    box-shadow: 0 0 10px #45f3ff;
+    animation: glow 0.6s ease-in-out;
+
+  }
+  @keyframes glow {
+    0% { opacity: 0.2; }
+    50% { opacity: 1; }
+    100% { opacity: 0.8; }
+  }
+  
+  /* Horizontal */
+  .segment.a, .segment.d, .segment.g {
+    width: 30px;
+    height: 6px;
+    left: 5px;
+  }
+  
+  .segment.a { top: 0; }
+  .segment.g { top: 37px; }
+  .segment.d { bottom: 0; }
+  
+  /* Vertical */
+  .segment.b, .segment.c, .segment.e, .segment.f {
+    width: 6px;
+    height: 30px;
+  }
+  
+  .segment.b { top: 5px; right: 0; }
+  .segment.c { bottom: 5px; right: 0; }
+  .segment.e { bottom: 5px; left: 0; }
+  .segment.f { top: 5px; left: 0; }
+  
+  .colon {
+    font-size: 60px;
+    color: rgb(0, 200, 255);
+    margin: 0 10px;
+  }
+  
+  
